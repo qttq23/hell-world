@@ -12,4 +12,4 @@ edidt 4 dsfsd
 nusa99 edited23
 nusa99 edited23 2new again
 
-new contributor edit again gain 23!
+new contributor edit again gain 23! -> by others with write access
