@@ -9,6 +9,7 @@ on:
       - 'main'
 jobs:
   check-admin1:
+    name: check-qttq23
     runs-on: ubuntu-latest
     env:
       NAME_ADMIN: qttq23
@@ -21,6 +22,7 @@ jobs:
         run: echo "ok"
         
   check-admin2:
+    name: check-nusa99
     runs-on: ubuntu-latest
     env:
       NAME_ADMID: nusa99
