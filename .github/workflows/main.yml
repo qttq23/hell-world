@@ -1,0 +1,15 @@
+
+
+name: actions_on_main_branch
+on: 
+  pull_request:
+    types:
+      - opened
+    branches:    
+      - 'main'
+jobs:
+  check-user-admin:
+    if: ${{ github.actor != 'qttq23' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
