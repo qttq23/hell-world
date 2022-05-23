@@ -12,13 +12,13 @@ jobs:
     name: job1
     runs-on: ubuntu-latest
     env:
-      expected_name: qttq23
+      NAME_QTTQ23: qttq23
     steps:
       - name: st1
-        if: ${{ github.actor != $expected_name }}
+        if: ${{ github.actor != env.NAME_QTTQ23 }}
         run: exit 1
       - name: st2
-        if: ${{ github.actor == $expected_name }}
+        if: ${{ github.actor == env.NAME_QTTQ23 }}
         run: echo "ok"
       
   
