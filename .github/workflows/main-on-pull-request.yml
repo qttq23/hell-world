@@ -25,7 +25,7 @@ jobs:
     name: checknusa99
     runs-on: ubuntu-latest
     env:
-      NAME_ADMID: nusa99
+      NAME_ADMIN: nusa99
     steps:
       - name: st1
         if: ${{ github.actor != env.NAME_ADMIN }}
