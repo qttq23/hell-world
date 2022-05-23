@@ -9,12 +9,14 @@ on:
       - 'main'
 jobs:
   check-user-admin:
+    name: job1
     if: ${{ github.actor != 'qttq23' }}
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
       
   Explore-GitHub-Actions:
+    name: job2
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
