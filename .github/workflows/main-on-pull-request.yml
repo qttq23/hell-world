@@ -11,12 +11,14 @@ jobs:
   check-user-admin:
     name: job1
     runs-on: ubuntu-latest
+    env:
+      expected_name: qttq23
     steps:
       - name: st1
-        if: ${{ github.actor != 'qttq23' }}
+        if: ${{ github.actor != $exptected_name }}
         run: exit 1
       - name: st2
-        if: ${{ github.actor == 'qttq23' }}
+        if: ${{ github.actor == $exptected_name }}
         run: echo "ok"
       
   
