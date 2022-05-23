@@ -8,17 +8,28 @@ on:
     branches:    
       - 'main'
 jobs:
-  check-user-admin:
-    name: job1
+  check-admin1:
     runs-on: ubuntu-latest
     env:
-      NAME_QTTQ23: qttq23
+      NAME_ADMIN: qttq23
     steps:
       - name: st1
-        if: ${{ github.actor != env.NAME_QTTQ23 }}
+        if: ${{ github.actor != env.NAME_ADMIN }}
         run: exit 1
       - name: st2
-        if: ${{ github.actor == env.NAME_QTTQ23 }}
+        if: ${{ github.actor == env.NAME_ADMIN }}
+        run: echo "ok"
+        
+  check-admin2:
+    runs-on: ubuntu-latest
+    env:
+      NAME_ADMID: nusa99
+    steps:
+      - name: st1
+        if: ${{ github.actor != env.NAME_ADMIN }}
+        run: exit 1
+      - name: st2
+        if: ${{ github.actor == env.NAME_ADMIN }}
         run: echo "ok"
       
   
