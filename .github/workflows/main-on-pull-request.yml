@@ -15,10 +15,10 @@ jobs:
       expected_name: qttq23
     steps:
       - name: st1
-        if: ${{ github.actor != '$exptected_name' }}
+        if: ${{ github.actor != env.exptected_name }}
         run: exit 1
       - name: st2
-        if: ${{ github.actor == '$exptected_name' }}
+        if: ${{ github.actor == env.exptected_name }}
         run: echo "ok"
       
   
